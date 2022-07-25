@@ -5,6 +5,9 @@
 .pnp.js
 .next
 
+# docker
+docker
+
 # testing
 /coverage
 
