@@ -6,8 +6,13 @@
 ---
 
 # ToDo:
+- [ ] Postgres -> Django
+- [ ] Django -> Node
+- [ ] Dockerfile for Django and Postgres
+- [ ] Dockerfile for Node
 - [ ] Finish Readme
 - [ ] Find Color Scheme
+- [ ] Toolchest integratino for alphafold
 
 ## Tech
 - PostgreSQL
