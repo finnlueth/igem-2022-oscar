@@ -1,10 +1,13 @@
 import React from 'react'
-import Navbar from './components/Navbar/Navbar'
+import Header from './containers/header/Header'
+import Main from './pages/main/Main'
+
 
 const App = () => {
   return (
-    <div className='App'>
-        <Navbar />
+    <div className='header'>
+        <Header />
+        <Main />
     </div>
     )
 }
