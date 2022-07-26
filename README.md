@@ -1,4 +1,6 @@
-<img src="ui/src/assets/icons/oscar.png" alt="logo" style="width:200px;"/>
+<p align="center">
+    <img src="ui/src/assets/icons/oscar.png" alt="logo" style="width:400px;">
+</p>
 
 # About
 ---
@@ -25,4 +27,3 @@ docker run -ti -p 3000:3000 oscar-docker
 source /Users/finnlueth/.virtualenvs/oscar/bin/activate.fish
 
 python3 manage.py runserver
-'''
