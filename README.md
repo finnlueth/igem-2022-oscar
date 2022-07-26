@@ -1,5 +1,5 @@
 # About
- 
+![logo](ui/src/assets/icons/oscar.png)
 ---
 
 # ToDo:
