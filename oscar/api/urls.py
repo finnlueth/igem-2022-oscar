@@ -1,6 +1,8 @@
 from django.urls import path
-from .views import main
+from .views import EntryView, main
 
 urlpatterns = [
-    path('', main)
+    path('home', EntryView.as_view()),
+    path('main', main),
+    # path('<int:year>/', year),
 ]
