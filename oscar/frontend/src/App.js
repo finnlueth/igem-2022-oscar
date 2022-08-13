@@ -1,22 +1,16 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import React from 'react'
+import {render} from 'react-dom';
 
-// import Header from './containers/header/Header'
-import Main from './pages/main/Main'
+// import Footer from './components/Footer';
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+const App = () => {
     return (
-      <div>
-        Test
-      </div>
+        <div>
+            <h1>OSCAR</h1>
+            Test App.js
+        </div>
     );
-  }
 }
 
 const appDiv = document.getElementById("app");
-render(<App />, appDiv);
+render( <App/> , appDiv);
