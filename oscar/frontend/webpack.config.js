@@ -2,36 +2,71 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  entry: "./src/index.js",
-  output: {
-    path: path.resolve(__dirname, "./static/frontend"),
-    filename: "[name].js",
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js|.jsx$/,
-        resolve: {
-            extensions: ['.js', '.jsx']
-          },
-        exclude: /node_modules/,
-        use: "babel-loader",
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        use: ["style-loader", "css-loader"],
-      },
+    target: 'web',
+    entry: "./src/index.js",
+    output: {
+        path: path.resolve(__dirname, "./static/frontend"),
+        filename: "[name].js",
+    },
+    module: {
+        rules: [{
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [{
+                    loader: 'file-loader',
+                }, ],
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.js|.jsx$/,
+                resolve: {
+                    extensions: ['.js', '.jsx']
+                },
+                exclude: /node_modules/,
+                use: "babel-loader",
+            },
+            {
+                test: /\.(scss)$/,
+                use: [{
+                    loader: 'style-loader', // inject CSS to page
+                }, {
+                    loader: 'css-loader', // translates CSS into CommonJS modules
+                }, {
+                    loader: 'postcss-loader', // Run postcss actions
+                    options: {
+                        plugins: function () { // postcss plugins, can be exported to postcss.config.js
+                            return [
+                                require('autoprefixer')
+                            ];
+                        }
+                    }
+                }, {
+                    loader: 'sass-loader' // compiles Sass to CSS
+                }]
+            },
+            {
+                test: /\.png$/,
+                loader: 'file-loader',
+                options: {
+                  name: '[name].[ext]',
+                  outputPath: 'images'
+                }
+              }
+        ],
+    },
+    optimization: {
+        minimize: true,
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            "process.env": {
+                NODE_ENV: JSON.stringify("development"),
+            },
+        }),
     ],
-  },
-  optimization: {
-    minimize: true,
-  },
-  plugins: [
-    new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: JSON.stringify("development"),
-      },
-    }),
-  ],
 };

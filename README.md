@@ -7,7 +7,7 @@
 
 # ToDo:
 - [ ] Postgres -> Django
-- [ ] Django -> Node
+- [ ] Django -> Non
 - [ ] Dockerfile for Django and Postgres
 - [ ] Dockerfile for Node
 - [ ] Finish Readme
@@ -25,6 +25,7 @@
 ## Colors and Design
 
 ## Commands
+npm run dev
 
 #### Docker
 docker build -t oscar-docker ./docker
@@ -36,7 +37,6 @@ docker run -ti -p 3000:3000 oscar-docker
 
 #### Django
 python3 manage.py runserver
-
 
 #### Venv
 python3 -m venv ~/.virtualenvs/oscar #initiate

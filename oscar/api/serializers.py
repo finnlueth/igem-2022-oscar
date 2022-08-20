@@ -5,3 +5,4 @@ class EntrySerializer(serializers.ModelSerializer):
     class Meta:
         model = Entry
         fields = ('id', 'name', 'date_creation', 'sequence')
+        
