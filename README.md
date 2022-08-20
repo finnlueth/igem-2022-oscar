@@ -7,12 +7,13 @@
 
 # ToDo:
 - [ ] Postgres -> Django
-- [ ] Django -> Node
+- [ ] Django -> Non
 - [ ] Dockerfile for Django and Postgres
 - [ ] Dockerfile for Node
 - [ ] Finish Readme
 - [ ] Find Color Scheme
 - [ ] Toolchest integratino for alphafold
+- [ ] REST
 
 ## Tech
 - PostgreSQL
@@ -24,14 +25,22 @@
 ## Colors and Design
 
 ## Commands
+npm run dev
 
+#### Docker
 docker build -t oscar-docker ./docker
-
 docker run -ti -p 3000:3000 oscar-docker
 
-source /Users/finnlueth/.virtualenvs/oscar/bin/activate.fish
+#### Postgres
+./manage.py makemigrations
+./manage.py migrate
 
+#### Django
 python3 manage.py runserver
+
+#### Venv
+python3 -m venv ~/.virtualenvs/oscar #initiate
+source /Users/finnlueth/.virtualenvs/oscar/bin/activate.fish
 
 ## Links
 - https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines

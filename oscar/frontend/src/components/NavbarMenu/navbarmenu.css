@@ -1,0 +1,21 @@
+table { 
+    background:#090;
+    color: white;
+}
+#stickytypeheader {
+    width: 100%;
+    height: 10px;
+}
+#sticky {
+    display: none;
+    height: 10px;
+}
+#header {
+    margin-bottom: 15px;
+}
+#content {
+    margin-top: 20px;
+}
+a{
+    color:#CCC;
+}
