@@ -9,7 +9,8 @@ module.exports = {
         filename: "[name].js",
     },
     module: {
-        rules: [{
+        rules: [
+            {
                 test: /\.(png|jpe?g|gif)$/i,
                 use: [{
                     loader: 'file-loader',
@@ -56,7 +57,18 @@ module.exports = {
                   name: '[name].[ext]',
                   outputPath: 'images'
                 }
-              }
+              },
+              {
+                test: /\.svg$/,
+                use: [
+                  {
+                    loader: 'svg-url-loader',
+                    options: {
+                      limit: 10000,
+                    },
+                  },
+                ],
+              },
         ],
     },
     optimization: {

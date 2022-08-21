@@ -21,4 +21,8 @@
     margin-right: auto;
     margin-left: auto;
     max-width: 1200px; /* or 950px */
+}
+
+body {
+    overscroll-behavior: none;
   }

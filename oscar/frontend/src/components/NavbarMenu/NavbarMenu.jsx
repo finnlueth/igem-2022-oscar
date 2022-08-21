@@ -1,7 +1,7 @@
 import React from 'react';
 import {Nav, Navbar, NavDropdown, Form, Button, Container, Row, Col} from 'react-bootstrap';
 import { TbSearch } from 'react-icons/tb';
-// import Image from '../../assets/images/oscar.png'
+import Logo from '../../assets/icons/oscar-bear.svg'
 import './navbarmenu.css'
 
 
@@ -11,7 +11,7 @@ const NavbarMenu = () => {
         <div id='stickytypeheader'>
             <Navbar bg="light" expand="sm">
                 <Container fluid>
-                    <Navbar.Brand href="#">aaa</Navbar.Brand>
+                    <Navbar.Brand href="/"><img src={Logo}></img></Navbar.Brand>
                     <Navbar.Collapse id="navbarScroll">
                         <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
                             <Nav.Link href="">Browse</Nav.Link>

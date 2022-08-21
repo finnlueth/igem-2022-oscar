@@ -8,7 +8,7 @@ const MadeByMunich = () => {
         <Container fluid>
                 <Row>
                     <Col>
-                        <div>Made with ❤️ by iGEM Munich</div>
+                        <div>Made with 🌭 by iGEM Munich</div>
                     </Col>
                 </Row>
         </Container>
