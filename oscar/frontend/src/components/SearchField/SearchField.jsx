@@ -1,75 +1,14 @@
 import React from 'react';
-import {Alert, Container, Row, Col, InputGroup, Form} from 'react-bootstrap';
+import {Alert, Container, Row, Col, InputGroup, Form, Button} from 'react-bootstrap';
+import { TbSearch } from 'react-icons/tb';
 import './searchfield.css'
 
 const SearchField = () => {
     return (
-        <Container fluid>
-            <div className='backgroundDiv'>
-                asdfasdfasd
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-            </div>
-        </Container>
+        <Form className="d-flex">  
+                <Form.Control type="search" placeholder="Find some CARs..." className="me-2" aria-label="Search"/>
+                <Button variant="primary"><TbSearch/></Button>
+        </Form>
     );
 }
 

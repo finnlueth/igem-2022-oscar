@@ -39,7 +39,7 @@ docker run -ti -p 3000:3000 oscar-docker
 python3 manage.py runserver
 
 #### Venv
-python3 -m venv ~/.virtualenvs/oscar #initiate
+initiate: python3 -m venv ~/.virtualenvs/oscar
 source /Users/finnlueth/.virtualenvs/oscar/bin/activate.fish
 
 ## Links

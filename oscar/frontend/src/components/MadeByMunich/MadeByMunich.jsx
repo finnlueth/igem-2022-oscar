@@ -4,13 +4,16 @@ import './madebymunich.css'
 
 const MadeByMunich = () => {
   return (
-    <div className="bg-secondary">
+    <div className="bg-dark">
         <Container fluid>
-                <Row>
-                    <Col>
-                        <div>Made with 🌭 by iGEM Munich</div>
-                    </Col>
-                </Row>
+            <Row>
+                <Col>
+                    <div className='text-light'>Made with 🧠 by iGEM Munich</div>
+                </Col>
+                <Col>
+                    <div class='text-light float-end'>Copyright © 2022 iGEM Munich. All rights reserved.</div>
+                </Col>
+            </Row>
         </Container>
     </div>
   )

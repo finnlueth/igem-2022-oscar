@@ -1,6 +1,7 @@
 import React from 'react'
 import {Nav, Navbar, NavDropdown, Form, Button, Container, Row, Col, CloseButton} from 'react-bootstrap';
 import { TbSearch } from 'react-icons/tb';
+import './toolbar.css'
 
 const Toolbar  = () => {
     return (

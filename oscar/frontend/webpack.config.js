@@ -51,20 +51,19 @@ module.exports = {
                 }]
             },
             {
-                test: /\.png$/,
+                test: /\.(jpe?g|png|gif|svg)$/i, 
                 loader: 'file-loader',
                 options: {
-                  name: '[name].[ext]',
-                  outputPath: 'images'
+                  name: '/public/icons/[name].[ext]'
                 }
-              },
-              {
+            },
+            {
                 test: /\.svg$/,
                 use: [
                   {
-                    loader: 'svg-url-loader',
+                    loader: '@svgr/webpack',
                     options: {
-                      limit: 10000,
+                      native: true,
                     },
                   },
                 ],

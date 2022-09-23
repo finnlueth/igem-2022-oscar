@@ -79,7 +79,13 @@ WSGI_APPLICATION = 'oscar.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'oscardb',
+        'NAME': 'oscar_backend',
+        'USER': 'admin',
+        'PASSWORD': 'PASSWORD',
+    },
+    'oscardb': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'oscar_database',
         'USER': 'admin',
         'PASSWORD': 'PASSWORD',
     }
