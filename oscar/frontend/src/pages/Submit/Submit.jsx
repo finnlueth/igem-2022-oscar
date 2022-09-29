@@ -1,19 +1,20 @@
 import React from 'react';
-import Header from '../../containers/header/Header';
-import Footer from '../../containers/footer/Footer';
 
 import {Alert, Container, Row, Col, InputGroup, Form} from 'react-bootstrap';
+import Footer from '../../containers/footer/Footer';
+import Header from '../../containers/header/Header';
 
-const About = () => {
+
+const Submit = () => {
     return (
-        <div className='About'>
+        <div className='Submit'>
             <Header/>
             <Container fluid>
-                About Page
+                Submit
             </Container>
             <Footer/>
         </div>
     );
 }
 
-export default About
+export default Submit

@@ -1,19 +1,22 @@
+import {Alert, Container, Row, Col, InputGroup, Form} from 'react-bootstrap';
+
 import React from 'react';
 import Header from '../../containers/header/Header';
 import Footer from '../../containers/footer/Footer';
 
-import {Alert, Container, Row, Col, InputGroup, Form} from 'react-bootstrap';
 
-const About = () => {
+
+
+const Documentation = () => {
     return (
-        <div className='About'>
+        <div className='Documentation'>
             <Header/>
             <Container fluid>
-                About Page
+                Doc Page
             </Container>
             <Footer/>
         </div>
     );
 }
 
-export default About
+export default Documentation

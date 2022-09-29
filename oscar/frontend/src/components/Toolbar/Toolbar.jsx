@@ -15,12 +15,15 @@ const Toolbar  = () => {
                         <Nav.Link eventKey="ide">IDE</Nav.Link>
                     </Nav.Item>
                 </Nav>
-                <Nav variant="pills" className="justify-content-end" defaultActiveKey="sign-up">
-                    <Nav.Item>
+                <Nav variant="pills" className="justify-content-end" defaultActiveKey="Submit">
+                    {/* <Nav.Item>
                         <Nav.Link eventKey="log-in">Log In</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link eventKey="sign-up">Sign Up</Nav.Link>
+                    </Nav.Item> */}
+                    <Nav.Item>
+                        <Nav.Link href="/submit" eventKey='Submit'>Submit</Nav.Link>
                     </Nav.Item>
                 </Nav>
             </Container>

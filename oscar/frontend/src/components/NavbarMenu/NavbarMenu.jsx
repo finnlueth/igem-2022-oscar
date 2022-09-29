@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 import { TbSearch }  from 'react-icons/tb';
 import './navbarmenu.css'
-import Logo from '../../assets/icons/oscar1.png'
+import Logo from '../../assets/icons/igem-logo-dark-bavaria-trans-bg-small.png'
 import SearchField from '../SearchField/SearchField';
 
 const NavbarMenu = () => {
@@ -18,10 +18,10 @@ const NavbarMenu = () => {
                     </Navbar.Brand>
                     <Navbar.Collapse id="navbarScroll">
                         <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '75px' }} navbarScroll>
-                            <Nav.Link href="/db/browse">Browse</Nav.Link>
+                            <Nav.Link href="/browse">Browse</Nav.Link>
                             <Nav.Link href="/about">About</Nav.Link>
                             <Nav.Link href="/changes">Changes</Nav.Link>
-                            <Nav.Link href="/doc">Help</Nav.Link>
+                            <Nav.Link href="/documentation">Documentation</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                     <SearchField/>
