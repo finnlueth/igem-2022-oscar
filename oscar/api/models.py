@@ -12,12 +12,15 @@ class Account(models.Model):
     user_id = models.AutoField(primary_key=True)
     username = models.CharField(unique=True, max_length=32)
     password = models.CharField(max_length=32)
-    created_on = models.DateTimeField()
+    created_on = models.DateTimeField(auto_now_add=True)
     last_login = models.DateTimeField(blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'account'
+
+    def __str__(self):
+        return self.username
 
 
 class Car(models.Model):
@@ -28,12 +31,27 @@ class Car(models.Model):
     receptor = models.ForeignKey('Receptor', models.DO_NOTHING, blank=True, null=True)
     izpart = models.ForeignKey('Izpart', models.DO_NOTHING, blank=True, null=True)
     user = models.ForeignKey(Account, models.DO_NOTHING)
-    created_on = models.DateTimeField()
+    created_on = models.DateTimeField(auto_now_add=True)
     last_update = models.DateTimeField(blank=True, null=True)
+    name = models.TextField(blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'car'
+
+    def __str__(self):
+        return str(self.car_id) + " | " + self.name
+
+
+class DjangoMigrations(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    app = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
+    applied = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'django_migrations'
 
 
 class Izdomain(models.Model):
@@ -47,6 +65,9 @@ class Izdomain(models.Model):
         managed = False
         db_table = 'izdomain'
 
+    def __str__(self):
+        return str(self.izdomain_id)
+
 
 class Izpart(models.Model):
     izpart_id = models.AutoField(primary_key=True)
@@ -55,6 +76,9 @@ class Izpart(models.Model):
     class Meta:
         managed = False
         db_table = 'izpart'
+    
+    def __str__(self):
+        return str(self.izpart_id)
 
 
 class Linker(models.Model):
@@ -65,6 +89,9 @@ class Linker(models.Model):
     class Meta:
         managed = False
         db_table = 'linker'
+
+    def __str__(self):
+        return str(self.linker_id)
 
 
 class Paper(models.Model):
@@ -79,6 +106,9 @@ class Paper(models.Model):
         managed = False
         db_table = 'paper'
 
+    def __str__(self):
+        return self.title
+
 
 class Receptor(models.Model):
     receptor_id = models.AutoField(primary_key=True)
@@ -90,6 +120,9 @@ class Receptor(models.Model):
     class Meta:
         managed = False
         db_table = 'receptor'
+
+    def __str__(self):
+        return str(self.receptor_id)
 
 
 class Reviewed(models.Model):
@@ -112,12 +145,32 @@ class Sequence(models.Model):
         managed = False
         db_table = 'sequence'
 
+    def __str__(self):
+        return str(self.seq_id)
+
 
 class Tmpart(models.Model):
     tmpart_id = models.AutoField(primary_key=True)
     seq = models.ForeignKey(Sequence, models.DO_NOTHING, blank=True, null=True)
     paper = models.ForeignKey(Paper, models.DO_NOTHING, blank=True, null=True)
+    function = models.TextField(blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'tmpart'
+    
+    def __str__(self):
+        return str(self.tmpart_id)
+
+class DebugTable(models.Model):
+    id = models.AutoField(primary_key=True)
+    debug_1 = models.TextField(blank=True, null=True)  # This field type is a guess.
+    debug_2 = models.BigIntegerField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'debug_table'
+
+    def __str__(self):
+        return self.debug_1 + " " + str(self.debug_2)
+

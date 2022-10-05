@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 import { TbSearch }  from 'react-icons/tb';
 import './navbarmenu.css'
-import Logo from '../../assets/icons/igem-logo-dark-bavaria-trans-bg-small.png'
+import Logo from '../../../media/icons/oscar_bear.png'
 import SearchField from '../SearchField/SearchField';
 
 const NavbarMenu = () => {

@@ -1,9 +1,33 @@
-# from rest_framework import serializers
-# from .models import Entry
+from rest_framework import serializers
+from .models import Car, DebugTable
 
-# class EntrySerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Entry
-#         fields = ('id', 'name', 'date_creation', 'sequence')
+class CarSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Car
+        fields = ('name', 'car_id','car_functionality',\
+            'linker', 'tmpart', 'receptor', 'izpart', 'user', 'created_on', 'last_update')
         
+class CreateCarSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Car
+        fields = [
+            'name',
+            'car_functionality',
+            'linker',
+            'tmpart',
+            'receptor',
+            'izpart',
+            'user',
+            'created_on',
+            'last_update'
+        ]
 
+class DebugSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DebugTable
+        fields = ('id', 'debug_1', 'debug_2')
+
+class CreateDebugSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DebugTable
+        fields = ('debug_1', 'debug_2')

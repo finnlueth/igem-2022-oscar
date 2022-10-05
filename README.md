@@ -6,14 +6,14 @@
 ---
 
 # ToDo:
-- [ ] Postgres -> Django
-- [ ] Django -> Non
+- [x] Postgres -> Django
+- [x] Django -> React
 - [ ] Dockerfile for Django and Postgres
 - [ ] Dockerfile for Node
 - [ ] Finish Readme
-- [ ] Find Color Scheme
-- [ ] Toolchest integratino for alphafold
-- [ ] REST
+- [x] Find Color Scheme
+- [ ] Toolchest integratino for alphafold (won't do)
+- [x] REST
 
 ## Tech
 - PostgreSQL

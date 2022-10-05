@@ -13,7 +13,7 @@ const Home = () => {
         <div className='Home'>
             <Header/>
             <Container fluid>
-                Test <br/>
+                Test123 <br/>
                 <Splash/>
                 <SearchFied/>
                 <Row>

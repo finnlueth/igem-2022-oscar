@@ -1,6 +1,6 @@
 import React from 'react'
 import {Nav, Navbar, NavDropdown, Form, Button, Container, Row, Col} from 'react-bootstrap';
-import igem_logo from '../../assets/icons/igem-logo-dark-bavaria-trans-bg-small.png'
+import igem_logo from '../../../media/icons/igem-logo-dark-bavaria-trans-bg-small.png'
 
 const FooterNav = () => {
     return (
@@ -8,7 +8,7 @@ const FooterNav = () => {
             <Container fluid>
                 <Row class='row-cols-md-5 py-5 my-5 border-top mt-5'>
                     <Col>
-                       <img src='../../assets/icons/igem-logo-dark-bavaria-trans-bg-small.png'/>
+                       <img src={igem_logo}/>
                     </Col>
                     <Col>
                         <h5>Section</h5>

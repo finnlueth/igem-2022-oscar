@@ -30,10 +30,20 @@ class Car(models.Model):
     user = models.ForeignKey(Account, models.DO_NOTHING)
     created_on = models.DateTimeField()
     last_update = models.DateTimeField(blank=True, null=True)
+    name = models.TextField(blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'car'
+
+
+class DebugTable(models.Model):
+    debug_1 = models.TextField(blank=True, null=True)  # This field type is a guess.
+    debug_2 = models.BigIntegerField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'debug_table'
 
 
 class DjangoMigrations(models.Model):
@@ -128,6 +138,7 @@ class Tmpart(models.Model):
     tmpart_id = models.AutoField(primary_key=True)
     seq = models.ForeignKey(Sequence, models.DO_NOTHING, blank=True, null=True)
     paper = models.ForeignKey(Paper, models.DO_NOTHING, blank=True, null=True)
+    function = models.TextField(blank=True, null=True)
 
     class Meta:
         managed = False

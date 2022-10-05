@@ -6,6 +6,7 @@ import Changes from '../Changes/Changes';
 import Submit from '../Submit/Submit';
 import Documentation from '../Documentation/Documentation';
 import Browse from '../Browse/Browse'
+import Entry from '../Entry/Entry';
 
 const RouterComponent = () => {
     return (
@@ -17,6 +18,7 @@ const RouterComponent = () => {
                 <Route path='/documentation' element={<Documentation/>}></Route>
                 <Route path='/submit' element={<Submit/>}></Route>
                 <Route path='/browse' element={<Browse/>}></Route>
+                <Route path='/db/:car_id_code' element={<Entry/>}></Route>
             </Routes>
         </Router>
     );

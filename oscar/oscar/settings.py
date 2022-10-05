@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'oscar.wsgi.application'
 
 DATABASES = {
     'default': {},
-    'oscar_backend' :{
+    'oscar_be' :{
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'oscar_backend',
         'USER': 'admin',
@@ -136,7 +136,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # ----------------------------------------------------------------------------------------
 import os
-MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
-DATABASE_ROUTERS = ['oscar.routers.db_routers.OscarDatabaseRouter',]
+DATABASE_ROUTERS = ['oscar.routers.db_routers.OscarBackendRouter', 'oscar.routers.db_routers.OscarDatabaseRouter']
