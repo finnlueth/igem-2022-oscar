@@ -6,17 +6,22 @@ const FooterNav = () => {
     return (
         <div className='bg-light'> 
             <Container fluid>
-                <Row class='row-cols-md-5 py-5 my-5 border-top mt-5'>
+                <Row>
                     <Col>
                        <img src={igem_logo}/>
                     </Col>
                     <Col>
-                        <h5>Section</h5>
+                        <h5>OSCAR</h5>
                     </Col>
                     <Col>
-                        <h5>Section</h5></Col>
-                    <Col><h5>Section</h5></Col>
-                    <Col><h5>Section</h5></Col>
+                        <h5>iGEM Munich</h5>
+                    </Col>
+                    <Col>
+                        <h5>Specificar</h5>
+                    </Col>
+                    <Col>
+                        <h5>iGEM</h5>
+                    </Col>
                 </Row>
             </Container>
         </div>

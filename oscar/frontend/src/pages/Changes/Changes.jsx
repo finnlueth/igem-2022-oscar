@@ -8,7 +8,7 @@ const Changes = () => {
     return (
         <div className='Changes'>
             <Header/>
-            <Container fluid>
+            <Container fluid className='body-container'>
             Changes Page
             </Container>
             <Footer/>

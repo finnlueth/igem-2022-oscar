@@ -11,7 +11,7 @@ const MadeByMunich = () => {
                     <div className='text-light'>Made with 🧠 by iGEM Munich</div>
                 </Col>
                 <Col>
-                    <div class='text-light float-end'>Copyright © 2022 iGEM Munich. All rights reserved.</div>
+                    <div className='text-light float-end'>Copyright © 2022 iGEM Munich. All rights reserved.</div>
                 </Col>
             </Row>
         </Container>

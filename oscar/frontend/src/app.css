@@ -1,0 +1,13 @@
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+}
+
+.body-container {
+    min-height: calc(100vh - 178px);
+}
+
+body {
+    overscroll-behavior: none;
+  }

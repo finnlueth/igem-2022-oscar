@@ -7,25 +7,17 @@ import Footer from '../../containers/footer/Footer';
 import Header from '../../containers/header/Header';
 import Splash from '../../components/Splash/Splash';
 
+import styles from './home.css'
+
 
 const Home = () => {
     return (
         <div className='Home'>
             <Header/>
-            <Container fluid>
-                Test123 <br/>
-                <Splash/>
-                <SearchFied/>
-                <Row>
-                    <div>
-                        OSCAR: Open Source Chimeric Antigen Receptors in 2022
-                    </div>
-                    <div>
-                        Names etc.
-                    </div>
-                    <div>
-                        Short About
-                    </div>
+            <Container fluid className='body-container d-flex align-items-center justify-content-center'>
+                <Row className='home-searchfield'>
+                    <Splash/>
+                    <SearchFied/>
                 </Row>
             </Container>
             <Footer/>
