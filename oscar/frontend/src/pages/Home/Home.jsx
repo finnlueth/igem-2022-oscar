@@ -7,7 +7,6 @@ import Footer from '../../containers/footer/Footer';
 import Header from '../../containers/header/Header';
 import Splash from '../../components/Splash/Splash';
 
-
 import styles from './home.css'
 
 
