@@ -1,7 +1,7 @@
 import {Alert, Container, Spinner, Row, Col, InputGroup, Card, CarouselItem} from 'react-bootstrap';
 import { useParams } from "react-router-dom";
 
-import React, { useState, useEffect }, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../../containers/header/Header';
 import Footer from '../../containers/footer/Footer';
 

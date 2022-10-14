@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="oscar/frontend/src/assets/icons/oscar.png" alt="logo" style="width:400px;">
+    <img src="oscar/media/icons/oscar.png" alt="logo" style="width:400px;">
 </p>
 
 # About
