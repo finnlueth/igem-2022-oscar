@@ -16,3 +16,7 @@ table {
 #content {
     margin-top: 200px;
 }
+
+.navbar {
+    --bs-navbar-brand-padding-y: 0em;
+}

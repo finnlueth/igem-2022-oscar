@@ -1,3 +1,14 @@
 .navbar {
     --bs-navbar-padding-y: 0.3rem;
 }
+
+.home-searchfield {
+    margin-top: -10%;
+    padding-top: 142px;
+    padding-bottom: 142px;
+    max-width: 768px;
+}
+
+.lucky {
+    max-width: 200px;
+}

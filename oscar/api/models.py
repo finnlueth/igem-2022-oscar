@@ -40,7 +40,7 @@ class Car(models.Model):
         db_table = 'car'
 
     def __str__(self):
-        return str(self.car_id) + " | " + self.name
+        return str(self.car_id) + " | " + self.name + " | " + self.car_functionality
 
 
 class DjangoMigrations(models.Model):
@@ -78,7 +78,7 @@ class Izpart(models.Model):
         db_table = 'izpart'
     
     def __str__(self):
-        return str(self.izpart_id)
+        return str(self.izpart_id) + " | " + self.izpart_functionality
 
 
 class Linker(models.Model):
@@ -91,7 +91,7 @@ class Linker(models.Model):
         db_table = 'linker'
 
     def __str__(self):
-        return str(self.linker_id)
+        return str(self.linker_id) +  " | " + str(self.seq) +  " | " + str(self.paper)
 
 
 class Paper(models.Model):
@@ -107,7 +107,7 @@ class Paper(models.Model):
         db_table = 'paper'
 
     def __str__(self):
-        return self.title
+        return self.title + " | " + self.doi
 
 
 class Receptor(models.Model):
@@ -146,7 +146,7 @@ class Sequence(models.Model):
         db_table = 'sequence'
 
     def __str__(self):
-        return str(self.seq_id)
+        return str(self.seq_id) + " | " + self.seq_annotation
 
 
 class Tmpart(models.Model):
@@ -161,16 +161,3 @@ class Tmpart(models.Model):
     
     def __str__(self):
         return str(self.tmpart_id)
-
-class DebugTable(models.Model):
-    id = models.AutoField(primary_key=True)
-    debug_1 = models.TextField(blank=True, null=True)  # This field type is a guess.
-    debug_2 = models.BigIntegerField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'debug_table'
-
-    def __str__(self):
-        return self.debug_1 + " " + str(self.debug_2)
-

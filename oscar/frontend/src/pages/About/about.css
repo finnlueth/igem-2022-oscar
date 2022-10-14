@@ -1,0 +1,11 @@
+.About{
+    z-index: 1;
+}
+
+card {
+    position: unset;
+}
+
+.body-container {
+    position: unset;
+}
