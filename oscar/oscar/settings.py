@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-5359*f)e5ex1m299@zzvwvv7n@eh*8bb(^4(7e6!x19=t7fcn_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://www.oscar-db.org/', '52.25.86.224', 'www.oscar-db.org', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -82,14 +82,19 @@ DATABASES = {
     'oscar_be' :{
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'oscar_backend',
-        'USER': 'admin',
-        'PASSWORD': 'PASSWORD',
+        'USER': 'postgres',
+        'PASSWORD': 'rYB84KKegjtp',
+        'HOST': 'oscardb.c9auiaz5bm2e.us-west-2.rds.amazonaws.com',
+        'PORT': '5432',
     },
     'oscar_db': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'oscar_database',
-        'USER': 'admin',
-        'PASSWORD': 'PASSWORD',
+        'NAME': 'oscar_db',
+        'USER': 'postgres',
+        'PASSWORD': 'rYB84KKegjtp',
+        'HOST': 'oscardb.c9auiaz5bm2e.us-west-2.rds.amazonaws.com',
+        'PORT': '5432',
+
     }
 }
 
