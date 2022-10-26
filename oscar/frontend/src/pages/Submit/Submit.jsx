@@ -30,7 +30,7 @@ const Submit = () => {
                 <h3>Submit</h3>
                 <Form>
                     <Form.Group className="mb-3" controlId="">
-                        <h5>CAR</h5>
+                    <h5>CAR</h5>
                         <Row>
                             <br/>
                             <Col>
@@ -49,7 +49,7 @@ const Submit = () => {
                             </Col>
                         </Row>
                         <hr/>
-                        <h5>Receptor</h5>
+                    <h5>Receptor</h5>
                         <Row>
                             <Col>
                                 <Form.Label>Receptor Fuctionality</Form.Label>
@@ -124,7 +124,7 @@ const Submit = () => {
                             </Col>
                         </Row>
                         <hr/>
-                        <h5>Linker</h5>
+                    <h5>Linker</h5>
                         <Row>
                             <Col>
                                 <Form.Label>Linker: Sequence Length</Form.Label>
@@ -184,6 +184,67 @@ const Submit = () => {
                             </Col>
                         </Row>
                         <hr/>
+                        <h5>TMpart</h5>
+                            <Row>
+                                <Col>
+                                    <Form.Label>TMpart: Sequence Length</Form.Label>
+                                    <Form.Control type="text" placeholder="Length"/>
+                                    <Form.Text className="text-muted">
+                                    How long is you receptor's sequence?
+                                    </Form.Text>
+                                </Col>
+                                <Col>
+                                    <Form.Label>TMpart: Sequence</Form.Label>
+                                    <Form.Control type="text" placeholder="Sequence"/>
+                                    <Form.Text className="text-muted">
+                                    Enter receptor's sequence here.
+                                    </Form.Text>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Form.Label>TMpart: Sequence Annotation</Form.Label>
+                                    <Form.Control type="text" placeholder="Annotation"/>
+                                    <Form.Text className="text-muted">
+                                    Sequence annotation for your receptor.
+                                    </Form.Text>
+                                </Col>
+                            </Row>
+                            <br/>
+                            <Row>
+                            <Col>
+                                <Form.Label>TMpart: Paper Title</Form.Label>
+                                <Form.Control type="text" placeholder="Title"/>
+                                <Form.Text className="text-muted">
+                                What is the title of the paper?
+                                </Form.Text>
+                            </Col>
+                            <Col>
+                                <Form.Label>TMpart: Paper DOI</Form.Label>
+                                <Form.Control type="text" placeholder="DOI"/>
+                                <Form.Text className="text-muted">
+                                What is the DOI of the paper?
+                                </Form.Text>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <Form.Label>TMpart: Paper Journal</Form.Label>
+                                <Form.Control type="text" placeholder="Journal"/>
+                                <Form.Text className="text-muted">
+                                What journal was the paper published in?
+                                </Form.Text>
+                            </Col>
+                            <Col>
+                                <Form.Label>TMpart: Paper Authors</Form.Label>
+                                <Form.Control type="text" placeholder="Authors"/>
+                                <Form.Text className="text-muted">
+                                Who are the authors of your paper?
+                                </Form.Text>
+                            </Col>
+                        </Row>
+                            <hr/>
+                            <h5>Reviewed</h5>
                     </Form.Group> 
                 </Form>
                 <Stack gap={2} className="col-md-5 mx-auto">

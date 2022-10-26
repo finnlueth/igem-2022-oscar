@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'oscar_backend',
         'USER': 'postgres',
-        'PASSWORD': 'rYB84KKegjtp',
+        'PASSWORD': 'm8a7dTtYXP',
         'HOST': 'oscardb.c9auiaz5bm2e.us-west-2.rds.amazonaws.com',
         'PORT': '5432',
     },
@@ -91,7 +91,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'oscar_db',
         'USER': 'postgres',
-        'PASSWORD': 'rYB84KKegjtp',
+        'PASSWORD': 'm8a7dTtYXP',
         'HOST': 'oscardb.c9auiaz5bm2e.us-west-2.rds.amazonaws.com',
         'PORT': '5432',
 

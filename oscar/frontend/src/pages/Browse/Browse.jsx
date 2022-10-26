@@ -1,4 +1,4 @@
-import {Alert, Container, Row, Col, InputGroup, Form, ListGroup} from 'react-bootstrap';
+import {Alert, Container, Spinner, Row, Col, InputGroup, Form, ListGroup} from 'react-bootstrap';
 
 import React, { useState, useEffect } from 'react';
 import Header from '../../containers/header/Header';
@@ -18,14 +18,13 @@ const Browse = () => {
                 setCaritem(response.data);
             })
         },[])
-    
 
     let content = null
 
     if (caritem) {
         content =
-            <ListGroup>
-            <ListGroup.Item>
+            <ListGroup className='position-static'>
+            <ListGroup.Item className='position-static'>
             <Row>
                 <Col xs={1}><b>ID</b></Col>
                 <Col><b>Name</b></Col>
@@ -44,12 +43,19 @@ const Browse = () => {
                     </ListGroup.Item>
                 )}
             </ListGroup>
+    } else {
+        content =
+        <div className="text-center">
+            <Spinner animation="border" role="status" variant="primary">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
+        </div>
     }
 
     return (
-        <div className='Browse'>
+        <div className='Browse '>
             <Header/>
-            <Container fluid className='body-container'>
+            <Container fluid className='position-static body-container'>
                 <h3>Browse</h3>
                 {content}
             </Container>

@@ -8,7 +8,9 @@ const FooterNav = () => {
             <Container fluid>
                 <Row className='align-items-center'>
                     <Col>
+                    <a href='http://igemmunich.mwn.de/'>
                        <img src={'/media/icons/igem-logo-dark-bavaria.svg'} height="100"/>
+                    </a>
                     </Col>
                     <Col>
                         <h5>OSCAR</h5>
@@ -26,10 +28,10 @@ const FooterNav = () => {
                     </Col>
                     <Col>
                         <h5>SpecifiCAR</h5>
-                        <a href='/browse' className="link-secondary">Wiki</a><br/>
-                        <a href='/about' className="link-secondary">About</a><br/>
-                        <a href='/documentation' className="link-secondary">Project</a><br/>
-                        <a href='/submit' className="link-secondary">Other</a><br/>
+                        <a href='https://2022.igem.wiki/munich/index.html' className="link-secondary">Wiki</a><br/>
+                        <a href='https://2022.igem.wiki/munich/index.html' className="link-secondary">About</a><br/>
+                        <a href='https://2022.igem.wiki/munich/description' className="link-secondary">Project</a><br/>
+                        <a href='https://2022.igem.wiki/munich/team' className="link-secondary">Team</a><br/>
                     </Col>
                     <Col>
                         <h5>iGEM</h5>

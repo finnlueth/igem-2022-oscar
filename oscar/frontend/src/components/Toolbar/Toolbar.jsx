@@ -11,9 +11,9 @@ const Toolbar  = () => {
                     <Nav.Item>
                         <Nav.Link eventKey="db">DB</Nav.Link>
                     </Nav.Item>
-                    <Nav.Item>
+                    {/* <Nav.Item>
                         <Nav.Link eventKey="ide">IDE</Nav.Link>
-                    </Nav.Item>
+                    </Nav.Item> */}
                 </Nav>
                 <Nav variant="pills" className="justify-content-end" defaultActiveKey="Submit">
                     {/* <Nav.Item>

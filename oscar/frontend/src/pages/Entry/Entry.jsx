@@ -5,6 +5,8 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../containers/header/Header';
 import Footer from '../../containers/footer/Footer';
 
+import './entry.css'
+
 import axios from 'axios'
 
 const Entry = () => {
@@ -21,6 +23,9 @@ const Entry = () => {
                 <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
                 There does not seem to be a CAR with this id: {car_id_code}.<br/>
                 API location: {car_url}
+                <div className='text-center'>
+                    <img className='oscar_img' src='/media/images/ice_bear.jpeg'/>
+                </div>
             </Alert>
             )
         } else {
@@ -40,6 +45,7 @@ const Entry = () => {
                 const request = await axios.get(car_url);
                 setCaritem(request.data)
             } catch {
+                console.log('error')
                 setIsError(true)
             }
             return request;
@@ -48,7 +54,7 @@ const Entry = () => {
     }, [car_url])
 
     useEffect(() => {
-        if (caritem) {
+        if (caritem && !isError) {
             var tmpart_url = `/api/tmparts/${caritem.tmpart}/?format=json`
             async function fetchData() {
                 try {
